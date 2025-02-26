@@ -39,8 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# 環境変数や不要なファイルを無視
-echo "node_modules/" >> .gitignore
-echo ".env" >> .gitignore
-echo "dist/" >> .gitignore
