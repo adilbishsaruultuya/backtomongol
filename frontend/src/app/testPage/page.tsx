@@ -1,21 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import { api } from "@/common";
-
+import { fetchTestData } from "@/service";
 interface TestData {
   id: string;
   test: string;
 }
-
-export const fetchTestData = async () => {
-  try {
-    const response = await api.get("/test");
-    return response.data;
-  } catch (error) {
-    console.error("❌ API fetch error:", error);
-    throw error;
-  }
-};
 
 export default function Home() {
   const [data, setData] = useState<TestData[]>([]);
