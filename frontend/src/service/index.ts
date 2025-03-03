@@ -1,1 +1,1 @@
-export * from "./getTest";
+export * from "./_component/getTest";

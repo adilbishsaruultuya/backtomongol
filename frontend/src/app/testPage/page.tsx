@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { fetchTestData } from "@/service";
+import { getA } from "@/service";
 interface TestData {
   id: string;
   test: string;
@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const result = await fetchTestData();
+        const result = await getA();
         console.log(result);
         setData(result);
       } catch (error) {
