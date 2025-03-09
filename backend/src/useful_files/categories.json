@@ -1,0 +1,22 @@
+[
+  { "name": "Politics" },
+  { "name": "International News" },
+  { "name": "Business" },
+  { "name": "Technology" },
+  { "name": "Sports" },
+  { "name": "Health" },
+  { "name": "Science" },
+  { "name": "Entertainment" },
+  { "name": "Education" },
+  { "name": "Environment" },
+  { "name": "Travel" },
+  { "name": "Lifestyle" },
+  { "name": "Food" },
+  { "name": "Culture" },
+  { "name": "Weather" },
+  { "name": "Opinion" },
+  { "name": "Crime" },
+  { "name": "Economy" },
+  { "name": "World News" },
+  { "name": "Local News" }
+]

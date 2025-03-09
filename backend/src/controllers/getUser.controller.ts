@@ -13,10 +13,9 @@ export const getUser: RequestHandler = async (req, res) => {
     });
     return;
   }
-  const { id } = jwt.verify(authorization, secretKey) as Payload;
+  const { id, role } = jwt.verify(authorization, secretKey) as Payload;
 
   const user = await UserModel.findOne({ _id: id });
-
   if (user) {
     try {
       res.json(user);

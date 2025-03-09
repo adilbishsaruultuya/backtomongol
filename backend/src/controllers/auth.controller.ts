@@ -42,10 +42,11 @@ export const signIn: RequestHandler = async (req, res) => {
   }
 
   const id = user._id;
-
+  const role = user.role;
   const token = jwt.sign(
     {
       id: id,
+      role: role,
     },
     secretKey,
     { expiresIn: "1h" }

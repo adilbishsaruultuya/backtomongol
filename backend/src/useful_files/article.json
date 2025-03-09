@@ -1,0 +1,34 @@
+[
+  {
+    "title": {
+      "mn": "Мэдээ 1 - Монгол",
+      "en": "Article 1 - English"
+    },
+    "content": {
+      "mn": "Энэ бол анхны мэдээний агуулга. Энэ нь Монгол хэлээр бичигдсэн байна.",
+      "en": "This is the content of the first article. It is written in English."
+    },
+    "coverPhoto": "https://example.com/image1.jpg",
+    "category": "67c8c7fff5a9c1732bd20d96",
+    "author": "67c7c77e83c977cf04906a1d",
+    "createdAt": "2025-03-06T00:00:00Z",
+    "updatedAt": "2025-03-06T00:00:00Z",
+    "publishedAt": "2025-03-06T00:00:00Z"
+  },
+  {
+    "title": {
+      "mn": "Мэдээ 2 - Монгол",
+      "en": "Article 2 - English"
+    },
+    "content": {
+      "mn": "Энэ бол хоёр дахь мэдээний агуулга. Энэ нь Монгол хэлээр бичигдсэн байна.",
+      "en": "This is the content of the second article. It is written in English."
+    },
+    "coverPhoto": "https://example.com/image2.jpg",
+    "category": "67c8c7fff5a9c1732bd20d96",
+    "author": "67c7c77e83c977cf04906a1d",
+    "createdAt": "2025-03-06T00:00:00Z",
+    "updatedAt": "2025-03-06T00:00:00Z",
+    "publishedAt": "2025-03-06T00:00:00Z"
+  }
+]
