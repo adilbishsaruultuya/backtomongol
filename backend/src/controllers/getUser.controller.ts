@@ -13,12 +13,14 @@ export const getUser: RequestHandler = async (req, res) => {
     });
     return;
   }
-  const { id, role } = jwt.verify(authorization, secretKey) as Payload;
+  const { id } = jwt.verify(authorization, secretKey) as Payload;
 
   const user = await UserModel.findOne({ _id: id });
   if (user) {
     try {
-      res.json(user);
+      res.json({
+        name: user.name,
+      });
       return;
     } catch (error) {
       res

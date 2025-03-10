@@ -7,6 +7,6 @@ export const getAllTests = async (req: Request, res: Response) => {
     res.json(tests);
   } catch (error) {
     console.error("❌ Error fetching tests:", error);
-    res.status(500).json({ error: "Failed to fetch test data" });
+    res.status(500).json({ error: "eee to fetch test data" });
   }
 };
