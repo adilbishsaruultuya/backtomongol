@@ -4,10 +4,9 @@ export type SignUpProps = {
 };
 
 export type UserType = {
-  _id?: string;
+  _id: string;
   name: string;
-  email: string;
-  articles?: ArticleType[];
+  role: string;
 };
 export type CategoryType = {
   _id?: string;
@@ -15,12 +14,24 @@ export type CategoryType = {
 };
 export type ArticleType = {
   _id?: string;
-  title: string;
-  content: string;
+  title: {
+    mn: string;
+    en: string;
+  };
+  content: {
+    mn: string;
+    en: string;
+  };
   coverPhoto?: string;
-  category: CategoryType;
-  author: UserType;
+  category: string;
+  author: string;
+  status: string;
   createdAt: Date;
   publishedAt?: Date;
   updatedAt?: Date;
+};
+
+export type SignInProps = {
+  email: string;
+  password: string;
 };

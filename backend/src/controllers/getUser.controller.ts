@@ -19,7 +19,9 @@ export const getUser: RequestHandler = async (req, res) => {
   if (user) {
     try {
       res.json({
+        _id: user.id,
         name: user.name,
+        role: user.role,
       });
       return;
     } catch (error) {

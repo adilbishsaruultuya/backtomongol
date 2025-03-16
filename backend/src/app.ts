@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import testRouter from "./routers/test.router";
-import getUser from "./routers/getUser.router";
 import getCategoriesRouter from "./routers/getCategories.router";
 import getArticlesRouter from "./routers/getArticles.router";
 import getArticlesByUserRoleRouter from "./routers/getArticlesByUserRole.router";
@@ -12,6 +11,8 @@ import createArticleRouter from "./routers/createArticle.router";
 import editArticleRouter from "./routers/editArticle.router";
 import changeArticleStatusRouter from "./routers/changeArticleStatus.router";
 import deleteArticleRouter from "./routers/deleteArticle.router";
+import getAllUserRouter from "./routers/getAllUser.router";
+import getUserRouter from "./routers/getUser.router";
 const app = express();
 
 app.use(cors());
@@ -34,6 +35,7 @@ app.use("/", createArticleRouter);
 app.use("/", editArticleRouter);
 app.use("/", changeArticleStatusRouter);
 app.use("/", deleteArticleRouter);
-app.use("/", getUser);
+app.use("/", getUserRouter);
+app.use("/", getAllUserRouter);
 
 export default app;
