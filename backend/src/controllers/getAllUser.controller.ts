@@ -34,7 +34,13 @@ export const getAllUser: RequestHandler = async (req, res) => {
 
   try {
     const allUser = await UserModel.find();
-    res.json(allUser);
+    const filteredUsers = allUser.map((user) => ({
+      id: user._id,
+      name: user.name,
+      role: user.role,
+    }));
+
+    res.json(filteredUsers);
     return;
   } catch (error) {
     res
