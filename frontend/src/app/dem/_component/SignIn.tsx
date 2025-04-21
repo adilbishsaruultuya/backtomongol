@@ -1,17 +1,16 @@
 "use client";
 
-import { useContext } from "react";
 import { useRouter } from "next/navigation";
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import { useAuth } from "@/app/kanri/providers/AuthProvider";
+import { useAuth } from "../_providers/AuthProvider";
 
 interface SignInValues {
   email: string;
   password: string;
 }
 
-export default function SignInPage() {
+export default function SignIn() {
   const { signIn } = useAuth();
   const router = useRouter();
 
@@ -39,7 +38,6 @@ export default function SignInPage() {
   ) => {
     try {
       await signIn({ email: values.email, password: values.password });
-      router.push("kanri/dashboard");
     } catch (error) {
       setErrors({ password: "Invalid email or password" });
     } finally {
@@ -48,7 +46,6 @@ export default function SignInPage() {
   };
 
   return (
-    // <div>aaa</div>
     <div className="flex items-center justify-center min-h-screen bg-base-200">
       <div className="card w-96 bg-base-100 shadow-xl p-6">
         <h2 className="text-2xl font-bold text-center">Sign In</h2>

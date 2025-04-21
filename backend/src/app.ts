@@ -13,6 +13,7 @@ import changeArticleStatusRouter from "./routers/changeArticleStatus.router";
 import deleteArticleRouter from "./routers/deleteArticle.router";
 import getAllUserRouter from "./routers/getAllUser.router";
 import getUserRouter from "./routers/getUser.router";
+import getArticlesByCategoryRouter from "./routers/getArticlesByCategory.router";
 const app = express();
 
 app.use(cors());
@@ -28,6 +29,7 @@ app.use("/", authRouter);
 app.use("/", testRouter);
 app.use("/", getCategoriesRouter);
 app.use("/", getArticlesRouter);
+app.use("/", getArticlesByCategoryRouter);
 
 app.use(authMiddleware);
 app.use("/", getArticlesByUserRoleRouter);

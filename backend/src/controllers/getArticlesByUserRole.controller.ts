@@ -67,7 +67,6 @@ export const getArticlesByUserRole = async (req: Request, res: Response) => {
           });
     console.log(query);
     const articles = await ArticleModel.find(query).exec();
-    console.log(articles);
     res.json(articles);
     return;
   } catch (error) {

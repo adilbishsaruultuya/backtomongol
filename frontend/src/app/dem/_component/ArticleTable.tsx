@@ -1,8 +1,7 @@
 "use client";
 import { useContext, useEffect } from "react";
 import { format } from "date-fns";
-import { useData } from "../../providers/DataProvider";
-import { ArticleType, CategoryType } from "@/types/common.types";
+import { ArticleType, CategoryType, UserType } from "@/types/common.types";
 
 const ArticleTable = ({
   articles,
@@ -44,7 +43,7 @@ const ArticleTable = ({
                 <td className="p-2">{article.title.mn}</td>
                 <td className="p-2">{getCategoryName(article.category)}</td>
                 <td className="p-2">
-                  {format(new Date(article.createdAt), "yyyy-MM-dd")}
+                  {format(new Date(article.createdAt ?? ""), "yyyy-MM-dd")}
                 </td>
               </tr>
             ))}

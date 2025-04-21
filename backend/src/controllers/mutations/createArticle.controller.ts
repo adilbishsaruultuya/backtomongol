@@ -5,6 +5,7 @@ import { secretKey } from "../../const_params";
 import { Payload, ArticleStatus } from "../../types";
 
 export const createArticle = async (req: Request, res: Response) => {
+  console.log("create kita");
   const { authorization } = req.headers;
 
   if (!authorization) {

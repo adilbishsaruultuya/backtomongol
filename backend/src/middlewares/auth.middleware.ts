@@ -18,7 +18,6 @@ export const authMiddleware: RequestHandler = async (req, res, next) => {
     const { id } = jwt.verify(authorization, secretKey) as Payload;
 
     const user = await UserModel.findOne({ _id: id });
-
     if (!user) {
       res.status(401).json({
         message: "Invalid credentials: USER NOT FOUND  ",

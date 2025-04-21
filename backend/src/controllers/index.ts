@@ -9,3 +9,4 @@ export * from "./mutations/editArticle.controller";
 export * from "./mutations/changeArticleStatus.controller";
 export * from "./mutations/deleteArticle.controller";
 export * from "./getAllUser.controller";
+export * from "./getArticlesByCategory.controller";

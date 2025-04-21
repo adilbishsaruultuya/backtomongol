@@ -9,3 +9,4 @@ export * from "./editArticle.router";
 export * from "./changeArticleStatus.router";
 export * from "./deleteArticle.router";
 export * from "./getAllUser.router";
+export * from "./getArticlesByCategory.router";

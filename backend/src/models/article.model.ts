@@ -30,6 +30,10 @@ const articleSchema = new Schema(
       enum: Object.values(ArticleStatus),
       default: ArticleStatus.Draft,
     },
+    englishEnabled: {
+      type: Boolean,
+      required: true,
+    },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
     publishedAt: {

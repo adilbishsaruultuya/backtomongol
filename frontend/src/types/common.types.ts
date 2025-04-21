@@ -9,24 +9,25 @@ export type UserType = {
   role: string;
 };
 export type CategoryType = {
-  _id?: string;
+  _id: string;
   name: string;
 };
 export type ArticleType = {
   _id?: string;
   title: {
     mn: string;
-    en: string;
+    en: string | null;
   };
   content: {
     mn: string;
-    en: string;
+    en: string | null;
   };
   coverPhoto?: string;
   category: string;
-  author: string;
+  author?: string;
   status: string;
-  createdAt: Date;
+  englishEnabled: boolean;
+  createdAt?: Date;
   publishedAt?: Date;
   updatedAt?: Date;
 };
@@ -34,4 +35,10 @@ export type ArticleType = {
 export type SignInProps = {
   email: string;
   password: string;
+};
+
+export type NavCategoryType = {
+  _id: string;
+  name: string;
+  path: string;
 };
